@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="brands">
+        <h1 class="brands__title">РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ</h1>
+        
+        <div class="brands__container">
+            <!-- Слайдер с пагинацией -->
+            <div class="swiper brands-swiper">
+                <ul class="swiper-wrapper brands__list">
+                    <!-- Основные логотипы -->
+                    <li class="swiper-slide brands__item">
+                        <a href="#" class="brands__link brands__link--lenovo"></a>
+                    </li>
+                    <li class="swiper-slide brands__item">
+                        <a href="#" class="brands__link brands__link--bosch"></a>
+                    </li>
+                    <li class="swiper-slide brands__item">
+                        <a href="#" class="brands__link brands__link--acer"></a>
+                    </li>
+                    <li class="swiper-slide brands__item">
+                        <a href="#" class="brands__link brands__link--samsung"></a>
+                    </li>
+                    <li class="swiper-slide brands__item">
+                        <a href="#" class="brands__link brands__link--viewsonic"></a>
+                    </li>
+                    <li class="swiper-slide brands__item">
+                        <a href="#" class="brands__link brands__link--sony"></a>
+                    </li>
+                    <li class="swiper-slide brands__item">
+                        <a href="#" class="brands__link brands__link--hp"></a>
+                    </li>
+                    <li class="swiper-slide brands__item">
+                        <a href="#" class="brands__link brands__link--apple"></a>
+                    </li>
+                    <!-- Дополнительные элементы -->
+                    <li class="swiper-slide brands__item hidden">
+                        <a href="#" class="brands__link brands__link--lenovo"></a>
+                    </li>
+                    <li class="swiper-slide brands__item hidden">
+                        <a href="#" class="brands__link brands__link--bosch"></a>
+                    </li>
+                    <li class="swiper-slide brands__item hidden">
+                        <a href="#" class="brands__link brands__link--acer"></a>
+                    </li>
+                    <li class="swiper-slide brands__item hidden">
+                        <a href="#" class="brands__link brands__link--samsung"></a>
+                    </li>
+                </ul>
+                <!-- Точки пагинации -->
+                <div class="swiper-pagination brands-pagination"></div>
+            </div>
+            
+            <button class="brands__toggle">
+                <span class="brands__toggle-text">Показать все</span>
+                <img src="images/expand.svg" alt="Стрелка" class="brands__toggle-icon">
+            </button>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+/* тоньше (400) */
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('../fonts/TTLakes-Regular.eot');
+    src: local('TT Lakes Regular'), local('TTLakes-Regular'),
+        url('../fonts/TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTLakes-Regular.woff') format('woff'),
+        url('../fonts/TTLakes-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* средний (500) */
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('../fonts/TTLakes-Medium.eot');
+    src: local('TT Lakes Medium'), local('TTLakes-Medium'),
+        url('../fonts/TTLakes-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTLakes-Medium.woff') format('woff'),
+        url('../fonts/TTLakes-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* жирный (700) */
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('TTLakes-Bold.eot');
+    src: local('../fonts/TT Lakes Bold'), local('TTLakes-Bold'),
+        url('../fonts/TTLakes-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTLakes-Bold.woff') format('woff'),
+        url('../fonts/TTLakes-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+ body {
+    margin: 0;
+    padding: 0;
+    background-color: #F8F8F8;
+    font-family: 'TT Lakes', sans-serif;
+}
+
+.brands {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.brands__title {
+    text-align: left;
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #7E7E82;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding: 8px 0;
+    border-top: 1px solid #D9FFF5;
+}
+
+.brands__container {
+    position: relative;
+}
+
+/* это Swiper */
+.brands-swiper {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 16px;
+}
+
+.brands__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.brands__item {
+    width: 240px;
+    height: 72px;
+}
+
+.brands__link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    transition: opacity 0.3s;
+}
+
+.brands__link:hover {
+    opacity: 0.8;
+}
+
+/* Стили для пагинации (точек) */
+.brands-pagination {
+    position: relative;
+    bottom: 0;
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+}
+
+.brands-pagination .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: #DDDDDD;
+    opacity: 1;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.brands-pagination .swiper-pagination-bullet-active {
+    background-color: #B5B6BC;
+}
+
+/* Кнопка "Показать все" */
+.brands__toggle {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    color: #1B1C21;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.brands__toggle-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+/* Скрытые элементы, появятся после нажатия */
+.hidden {
+    display: none;
+}
+
+/* лого */
+.brands__link--lenovo { background-image: url('images/lenovo.svg'); }
+.brands__link--bosch { background-image: url('images/bosch.svg'); }
+.brands__link--acer { background-image: url('images/acer.svg'); }
+.brands__link--samsung { background-image: url('images/samsung.svg'); }
+.brands__link--viewsonic { background-image: url('images/viewsonic.svg'); }
+.brands__link--sony { background-image: url('images/sony.svg'); }
+.brands__link--hp { background-image: url('images/hp.svg'); }
+.brands__link--apple { background-image: url('images/apple.svg'); }
+
+/* Адаптация для компа и планшетов */
+@media (min-width: 768px) {
+    .brands-swiper {
+        overflow: visible;
+    }
+    
+    .brands__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+    
+    .brands__item {
+        width: 100%;
+    }
+    
+    .brands-pagination {
+        display: none;
+    }
+    
+    @media (max-width: 1024px) {
+        .brands__list {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+/* Стили только для мобильной версии, кнопку скрыл */
+@media (max-width: 767px) {
+    .brands__item {
+        width: 240px;
+    }
+
+    .brands__toggle {
+
+        display: none;
+    }
+    
+    .brands-swiper {
+        padding: 0 16px;
+    }
+}
